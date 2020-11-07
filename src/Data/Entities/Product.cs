@@ -26,5 +26,7 @@ namespace Data.Entities
         public ICollection<DiscountProduct> Discounts { get; set; }
         public ICollection<Stock> Stocks { get; set; }
         public List<ProductTag> ProductTags { get; set; }
+        public List<ProductSpecification> ProductSpecifications { get; set; }
+
     }
 }

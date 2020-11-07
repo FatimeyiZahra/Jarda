@@ -19,10 +19,11 @@ namespace Data.Repositories.Implementations
         public async Task<IEnumerable<Product>> GetIsFreeProduct()
         {
             return await _context.Products
-                .Include(p=> p.Category)
+                                 .Include(p => p.Category)
                                  .Include(p => p.Stocks)
                                  .Include(p => p.Photos)
-                                 .Include(n=>n.ProductTags)
+                                 .Include(n => n.ProductTags).ThenInclude(n=>n.Tag)
+                                 .Include(s => s.ProductSpecifications).ThenInclude(s => s.Specification)
                                  .Where(p => p.Status && p.IsFree)
                                  .Where(p => p.Stocks.Any(s => s.Quantity > 0))
                                  .Include(p => p.Discounts).ThenInclude(p => p.Discount)

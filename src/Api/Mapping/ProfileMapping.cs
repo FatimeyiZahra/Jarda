@@ -17,11 +17,15 @@ namespace Api.Mapping
             CreateMap<Discount, DiscountResource>();
 
             CreateMap<Category, CategoryResource>();
+            CreateMap<Specification, SpecificationResource>();
 
             CreateMap<Product, ProductResource>()
                .ForMember(d => d.Photos, opt => opt.MapFrom(src => src.Photos.Select(p => BaseUrl + p.Photo).ToArray()))
                .ForMember(r => r.ProductTags, opt => opt.MapFrom(src => src.ProductTags
                                                                         .Select(s => s.Tag.Name)
+                                                                        .ToList()))
+               .ForMember(r => r.ProductSpecifications, opt => opt.MapFrom(src => src.ProductSpecifications
+                                                                        .Select(s => s.Specification.Name)
                                                                         .ToList()))
               .ForMember(d => d.Price, opt => opt.MapFrom(src => src.Stocks.FirstOrDefault().Price))
               .ForMember(d => d.Discount, opt => opt.MapFrom(src => src.Discounts.FirstOrDefault().Discount));

@@ -21,6 +21,8 @@ namespace Api.Resources
         public DiscountResource Discount { get; set; }
         public string[] Photos { get; set; }
         public List<string> ProductTags { get; set; }
+        public List<string> ProductSpecifications { get; set; }
+
         public CategoryResource Category { get; set; }
 
 

@@ -22,6 +22,8 @@ namespace Data
         private ProductTagRepository _productTagRepository;
         private StockRepository _stockRepository;
         private TagRepository _tagRepository;
+        private SpecificationRepository _specificationRepository;
+        private ProductSpecificationRepository _productSpecificationRepository;
 
         public UnitOfWork(ApplicationDbContext context)
         {
@@ -49,6 +51,10 @@ namespace Data
         public IStockRepository Stock => _stockRepository ??= new StockRepository(_context);
 
         public ITagRepository Tag => _tagRepository ??= new TagRepository(_context);
+        public ISpecificationRepository Specification => _specificationRepository ??= new SpecificationRepository(_context);
+        public IProductSpecificationRepository ProductSpecification => _productSpecificationRepository ??= new ProductSpecificationRepository(_context);
+
+
 
         public async Task<int> CommitAsync()
         {
