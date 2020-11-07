@@ -17,6 +17,7 @@ namespace Api.Mapping
             CreateMap<Discount, DiscountResource>();
 
             CreateMap<Category, CategoryResource>();
+
             CreateMap<Product, ProductResource>()
                .ForMember(d => d.Photos, opt => opt.MapFrom(src => src.Photos.Select(p => BaseUrl + p.Photo).ToArray()))
                .ForMember(r => r.ProductTags, opt => opt.MapFrom(src => src.ProductTags
