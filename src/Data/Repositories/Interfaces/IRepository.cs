@@ -8,7 +8,7 @@ namespace Data.Repositories.Interfaces
 {
     public interface IRepository<TEntity> where TEntity : class
     {
-        ValueTask<TEntity> GetByIdAsync(long id);
+        ValueTask<TEntity> GetByIdAsync(int id);
         Task<IEnumerable<TEntity>> GetAllAsync();
         IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
         Task<TEntity> SingleOrDefaultAsync(Expression<Func<TEntity, bool>> predicate);

@@ -33,6 +33,7 @@ namespace Api.Controllers.V1
             return Ok(categoryResources);
 
         }
+
         [Route("free-product")]
         [HttpGet]
         public async Task<IActionResult> GetFreeProduct()
@@ -42,8 +43,53 @@ namespace Api.Controllers.V1
 
             return Ok(productResources);
 
+        }
+
+        [Route("new-product")]
+        [HttpGet]
+        public async Task<IActionResult> GetNewProduct()
+        {
+            var products = await _unitOfWork.Product.GetIsNewProduct();
+            var productResources = _mapper.Map<IEnumerable<Product>, IEnumerable<ProductResource>>(products);
+
+            return Ok(productResources);
+        }
+
+        [Route("coming-product")]
+        [HttpGet]
+        public async Task<IActionResult> GetComingProduct()
+        {
+            var products = await _unitOfWork.Product.GetIsComingProduct();
+            var productResources = _mapper.Map<IEnumerable<Product>, IEnumerable<ProductResource>>(products);
+
+            return Ok(productResources);
 
         }
 
+        [Route("products")]
+        [HttpGet]
+        public async Task<IActionResult> GetProductsByCategory([FromQuery] int categoryId,
+                                                               [FromQuery] int page = 1)
+        {
+
+            var category = await _unitOfWork.Category.GetByIdAsync(categoryId);
+
+            if (category == null) return NotFound();
+
+            var totalProducts = await _unitOfWork.Product.GetProductsCountByCategoryId(categoryId);
+
+            var products = await _unitOfWork.Product.GetProductsByCategoryId( categoryId, page);
+
+            var productResources = _mapper.Map<IEnumerable<Product>, IEnumerable<ProductResource>>(products);
+            return Ok(new
+            {
+                products = productResources,
+                pagination = new
+                {
+                    current = page,
+                    totalPage = Convert.ToInt32(Math.Ceiling(totalProducts / 12.0))
+                }
+            });
+        }
     }
 }

@@ -37,10 +37,15 @@ namespace Data.Repositories.Implementations
             return await Context.Set<TEntity>().ToListAsync();
         }
 
-        public ValueTask<TEntity> GetByIdAsync(long id)
+        public ValueTask<TEntity> GetByIdAsync(int id)
         {
             return Context.Set<TEntity>().FindAsync(id);
         }
+
+        //public ValueTask<TEntity> GetByIdAsync(int id)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public void Remove(TEntity entity)
         {
