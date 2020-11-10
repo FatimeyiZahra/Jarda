@@ -2,10 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Data.Repositories.Interfaces
 {
     public interface INewsRepository : IRepository<News>
     {
+        Task<IEnumerable<News>> GetAllNewWithCategories();
     }
 }

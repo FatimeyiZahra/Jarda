@@ -13,5 +13,6 @@ namespace Data.Repositories.Interfaces
         Task<IEnumerable<Product>> GetIsComingProduct();
         Task<IEnumerable<Product>> GetProductsByCategoryId(int categoryId, int page);
         Task<int> GetProductsCountByCategoryId(int categoryId);
+        Task<Product> GetProductById(int id);
     }
 }

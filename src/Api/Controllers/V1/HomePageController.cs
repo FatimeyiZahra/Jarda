@@ -78,7 +78,7 @@ namespace Api.Controllers.V1
 
             var totalProducts = await _unitOfWork.Product.GetProductsCountByCategoryId(categoryId);
 
-            var products = await _unitOfWork.Product.GetProductsByCategoryId( categoryId, page);
+            var products = await _unitOfWork.Product.GetProductsByCategoryId(categoryId, page);
 
             var productResources = _mapper.Map<IEnumerable<Product>, IEnumerable<ProductResource>>(products);
             return Ok(new
@@ -90,6 +90,32 @@ namespace Api.Controllers.V1
                     totalPage = Convert.ToInt32(Math.Ceiling(totalProducts / 12.0))
                 }
             });
+        }
+
+        [Route("product/{id}")]
+        [HttpGet]
+        public async Task<IActionResult> GetProductById(int id)
+        {
+            var product = await _unitOfWork.Product.GetProductById(id);
+
+            if (product == null) return NotFound();
+
+            var productResource = _mapper.Map<Product, ProductResource>(product);
+
+            return Ok(productResource);
+        }
+
+        [Route("news")]
+        [HttpGet]
+        public async Task<IActionResult> GetNews()
+        {
+            var news = await _unitOfWork.News.GetAllNewWithCategories();
+
+            var newsResources = _mapper.Map<IEnumerable<News>, IEnumerable<NewsResource>>(news);
+
+
+            return Ok(newsResources);
+
         }
     }
 }

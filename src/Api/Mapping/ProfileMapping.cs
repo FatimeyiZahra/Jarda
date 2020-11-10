@@ -29,7 +29,16 @@ namespace Api.Mapping
                                                                         .ToList()))
               .ForMember(d => d.Price, opt => opt.MapFrom(src => src.Stocks.FirstOrDefault().Price))
               .ForMember(d => d.Discount, opt => opt.MapFrom(src => src.Discounts.FirstOrDefault().Discount));
-              //.ForMember(c => c.Category, opt => opt.MapFrom(src => src.Category));
+            //.ForMember(c => c.Category, opt => opt.MapFrom(src => src.Category));
+
+            CreateMap<NewsResource, NewsCategory>();
+
+            CreateMap<News, NewsResource>()
+               .ForMember(d => d.Photos, opt => opt.MapFrom(src => src.NewsPhotos.Select(p => BaseUrl + p.Photo).ToArray()))
+
+              .ForMember(n => n.NewsCategories, opt => opt.MapFrom(src => src.NewsCategories
+                                                                      .Select(s => s.Category.Name)
+                                                                      .ToList()));
 
 
         }
