@@ -17,12 +17,34 @@ namespace Data.Repositories.Implementations
 
         public async Task<IEnumerable<News>> GetAllNewWithCategories()
         {
-            return await _context.News.Include("NewsCategories")
-                  .Include("NewsCategories.Category")
-                  .Where(n => n.Status)
-                  .Include(p => p.NewsPhotos)
-                  .ToListAsync();
+            return await _context.News
+                                  .Include("NewsCategories")
+                                  .Include("NewsCategories.Category")
+                                  .Where(n => n.Status)
+                                  .Include(p => p.NewsPhotos)
+                                  .ToListAsync();
 
+        }
+
+        public async Task<IEnumerable<News>> GetNewsByCategoryId(int categoryId, int page)
+        {
+            return await _context.News
+                                    .Include(p => p.NewsPhotos)
+                                    .IncludeFilter(p => p.NewsCategories.FirstOrDefault(s => s.CategoryId == categoryId))
+                                    .Where(p => p.Status)
+                                    .OrderByDescending(p => p.AddedDate)
+                                    .Skip((page - 1) * 12)
+                                    .Take(12)
+                                    .ToListAsync();
+        }
+
+        public async Task<int> GetNewsCountByCategoryId(int categoryId)
+        {
+            return await _context.News
+                                    .Include(p => p.NewsPhotos)
+                                    .Where(p => p.Status)
+                                    .IncludeFilter(p => p.NewsCategories.FirstOrDefault(s => s.CategoryId == categoryId))
+                                    .CountAsync();
         }
     }
 }

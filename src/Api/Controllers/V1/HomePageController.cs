@@ -105,17 +105,6 @@ namespace Api.Controllers.V1
             return Ok(productResource);
         }
 
-        [Route("news")]
-        [HttpGet]
-        public async Task<IActionResult> GetNews()
-        {
-            var news = await _unitOfWork.News.GetAllNewWithCategories();
-
-            var newsResources = _mapper.Map<IEnumerable<News>, IEnumerable<NewsResource>>(news);
-
-
-            return Ok(newsResources);
-
-        }
+       
     }
 }

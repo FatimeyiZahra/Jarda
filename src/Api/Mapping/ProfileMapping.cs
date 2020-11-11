@@ -32,9 +32,13 @@ namespace Api.Mapping
             //.ForMember(c => c.Category, opt => opt.MapFrom(src => src.Category));
 
             CreateMap<NewsResource, NewsCategory>();
+            //CreateMap<NewsCategory, NewsResource>();
+
 
             CreateMap<News, NewsResource>()
-               .ForMember(d => d.Photos, opt => opt.MapFrom(src => src.NewsPhotos.Select(p => BaseUrl + p.Photo).ToArray()))
+               .ForMember(d => d.Photos, opt => opt.MapFrom(src => src.NewsPhotos
+                                                                            .Select(p => BaseUrl + p.Photo)
+                                                                            .ToArray()))
 
               .ForMember(n => n.NewsCategories, opt => opt.MapFrom(src => src.NewsCategories
                                                                       .Select(s => s.Category.Name)

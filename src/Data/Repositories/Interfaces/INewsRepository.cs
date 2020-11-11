@@ -9,5 +9,8 @@ namespace Data.Repositories.Interfaces
     public interface INewsRepository : IRepository<News>
     {
         Task<IEnumerable<News>> GetAllNewWithCategories();
+        Task<int> GetNewsCountByCategoryId(int categoryId);
+        Task<IEnumerable<News>> GetNewsByCategoryId(int categoryId, int page);
+        //Task<IEnumerable<News>> GetNews();
     }
 }
