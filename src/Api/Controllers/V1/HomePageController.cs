@@ -105,6 +105,25 @@ namespace Api.Controllers.V1
             return Ok(productResource);
         }
 
-       
+        [Route("relative-products")]
+        [HttpGet]
+        public async Task<IActionResult> GetRelativeProductsById([FromQuery] int productId)
+        {
+
+            var product = await _unitOfWork.Product.GetByIdAsync(productId);
+
+            if (product == null) return NotFound();
+
+            var products = await _unitOfWork.Product.GetProductsByCategoryId(product.CategoryId, 1);
+
+            var productList = products.ToList();
+
+            productList.RemoveAll(p => p.Id == product.Id);
+
+            var productResources = _mapper.Map<IEnumerable<Product>, IEnumerable<ProductResource>>(productList.Take(3));
+
+            return Ok(productResources);
+
+        }
     }
 }

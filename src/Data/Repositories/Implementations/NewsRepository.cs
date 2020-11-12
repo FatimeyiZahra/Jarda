@@ -38,6 +38,14 @@ namespace Data.Repositories.Implementations
                                     .ToListAsync();
         }
 
+        public async Task<News> GetNewsById(int id)
+        {
+            return await _context.News
+                                      .Include(p => p.NewsPhotos)
+                                      .Where(p => p.Status && p.Id== id)
+                                      .FirstOrDefaultAsync();
+        }
+
         public async Task<int> GetNewsCountByCategoryId(int categoryId)
         {
             return await _context.News
@@ -46,5 +54,6 @@ namespace Data.Repositories.Implementations
                                     .IncludeFilter(p => p.NewsCategories.FirstOrDefault(s => s.CategoryId == categoryId))
                                     .CountAsync();
         }
+
     }
 }

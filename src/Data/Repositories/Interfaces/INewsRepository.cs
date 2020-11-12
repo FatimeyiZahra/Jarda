@@ -11,6 +11,7 @@ namespace Data.Repositories.Interfaces
         Task<IEnumerable<News>> GetAllNewWithCategories();
         Task<int> GetNewsCountByCategoryId(int categoryId);
         Task<IEnumerable<News>> GetNewsByCategoryId(int categoryId, int page);
+        Task<News> GetNewsById(int id);
         //Task<IEnumerable<News>> GetNews();
     }
 }

@@ -61,5 +61,39 @@ namespace Api.Controllers.V1
             });
 
         }
+
+        [Route("news/{id}")]
+        [HttpGet]
+        public async Task<IActionResult> GetProductById(int id)
+        {
+            var news = await _unitOfWork.News.GetNewsById(id);
+
+            if (news == null) return NotFound();
+
+            var newsResource = _mapper.Map<News, NewsResource>(news);
+
+            return Ok(newsResource);
+        }
+
+
+        [Route("relative-news")]
+        [HttpGet]
+        public async Task<IActionResult> GetRelativeNewsById([FromQuery] int newsId)
+        {
+
+            var news = await _unitOfWork.News.GetByIdAsync(newsId);
+
+            if (news == null) return NotFound();
+
+            var newss = await _unitOfWork.News.GetNewsByCategoryId(news.NewsCategories.Any, 1) ;
+
+            var newsList = newss.ToList();
+
+            newsList.RemoveAll(p => p.Id == news.Id);
+
+            var newsResources = _mapper.Map<IEnumerable<News>, IEnumerable<NewsResource>>(newsList.Take(3));
+
+            return Ok(newsResources);
+        }
     }
 }
