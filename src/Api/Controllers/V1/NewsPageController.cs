@@ -35,7 +35,7 @@ namespace Api.Controllers.V1
             return Ok(newsResources);
 
         }
-        [Route("news")]
+        [Route("newss")]
         [HttpGet]
         public async Task<IActionResult> GetNewsByCategory([FromQuery] int categoryId,
                                                             [FromQuery] int page = 1)
@@ -64,7 +64,7 @@ namespace Api.Controllers.V1
 
         [Route("news/{id}")]
         [HttpGet]
-        public async Task<IActionResult> GetProductById(int id)
+        public async Task<IActionResult> GetNewsById(int id)
         {
             var news = await _unitOfWork.News.GetNewsById(id);
 
@@ -85,7 +85,7 @@ namespace Api.Controllers.V1
 
             if (news == null) return NotFound();
 
-            var newss = await _unitOfWork.News.GetNewsByCategoryId(news.NewsCategories.Any, 1) ;
+            var newss = await _unitOfWork.News.GetSimilarNews(news);
 
             var newsList = newss.ToList();
 

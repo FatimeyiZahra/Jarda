@@ -26,11 +26,21 @@ namespace Data.Repositories.Implementations
 
         }
 
+        public async Task<IEnumerable<News>> GetSimilarNews(News news)
+        {
+            return await _context.News
+                        .Include("NewsCategories.Category")
+                        .Where(n => n.NewsCategories
+                        .Any(c => c.Category.Name
+                        .Contains(news.NewsCategories.FirstOrDefault().Category.Name)))
+                        .ToListAsync();
+        }
         public async Task<IEnumerable<News>> GetNewsByCategoryId(int categoryId, int page)
         {
             return await _context.News
                                     .Include(p => p.NewsPhotos)
                                     .IncludeFilter(p => p.NewsCategories.FirstOrDefault(s => s.CategoryId == categoryId))
+                                    //.Where(p=>p.NewsCategories.Any(c=>c.CategoryId==categoryId))
                                     .Where(p => p.Status)
                                     .OrderByDescending(p => p.AddedDate)
                                     .Skip((page - 1) * 12)
@@ -55,5 +65,6 @@ namespace Data.Repositories.Implementations
                                     .CountAsync();
         }
 
+       
     }
 }
