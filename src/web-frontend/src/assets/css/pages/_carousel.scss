@@ -1,0 +1,23 @@
+.carousel-indicators {
+    margin: 11px 18px;
+    left: auto;
+}
+.carousel-control-next,
+.carousel-control-prev {
+    bottom: auto;
+    background: #000;
+    width: 35px;
+    height: 35px;
+    margin: 15px;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    width: 12px;
+}
+.carousel-control-prev {
+    right: 36px;
+    left: auto;
+}
+.carousel-indicators li {
+    background-color: #121212;
+}

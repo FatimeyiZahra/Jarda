@@ -28,9 +28,15 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/css/style.css",
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js",              "node_modules/fontawesome/generate.js",
+              "node_modules/fontawesome/index.js"
+            ]
           },
           "configurations": {
             "production": {

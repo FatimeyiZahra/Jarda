@@ -1,0 +1,25 @@
+/* Footer */
+.footer {
+    ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li {
+            line-height: 28px;
+            a {
+                color: rgba(0, 0, 0, 0.5) !important;
+                &:hover {
+                    opacity: unset;
+                }
+            }
+        }
+    }
+    h6 {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+}
+.app .img-fluid {
+    height: 38px;
+}
+/* End Footer */

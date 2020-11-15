@@ -1,0 +1,114 @@
+/* Top Nav */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+}
+.osahan-nav-top .container {
+    padding: 0 16px;
+}
+.osahan-nav-top .img-profile {
+    width: 30px;
+    height: 30px;
+}
+.osahan-nav-top .navbar-brand img {
+    height: 31px;
+    margin: 0px 0 0 0;
+}
+.osahan-nav-top .osahan-list-dropdown .nav-link i {
+    font-size: 16px;
+}
+.osahan-nav-top .osahan-list-dropdown .nav-link .badge {
+    position: absolute;
+    border-radius: 50px;
+    min-width: 15px;
+    height: 15px;
+    font-size: 9px;
+    padding: 0px;
+    right: 1px;
+    line-height: 15px;
+    top: 11px;
+}
+.osahan-nav-top .nav-link {
+    position: relative;
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+.osahan-nav-top .navbar-search .form-control {
+    background: #e8e8e8;
+    min-height: 35px;
+}
+.osahan-nav-top .navbar-search .btn {
+    background: #e8e8e8 !important;
+    color: #74828e;
+    padding: 0 12px;
+    border: none;
+}
+.dropdown-list .dropdown-item {
+    white-space: normal;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-left: 1px solid #e2e2e2;
+    border-right: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    line-height: 1.3rem;
+}
+.dropdown-list {
+    padding: 0;
+    border: none;
+    overflow: hidden;
+    width: 20rem !important;
+}
+.dropdown-list .dropdown-header {
+    background-color: #131313;
+    border: 1px solid #353535;
+    color: #fff;
+    font-weight: 800;
+    font-size: 14px;
+    padding: 0.8rem 1rem;
+}
+.dropdown-list .icon-circle {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.no-arrow .dropdown-toggle::after {
+    display: none;
+}
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.dropdown .dropdown-menu,
+.dropdown-item {
+    font-size: 0.85rem;
+}
+.text-gray-500 {
+    color: #b7b9cc !important;
+}
+.dropdown-list-image {
+    position: relative;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.dropdown-list-image img {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.dropdown-list-image .status-indicator {
+    background-color: #eaecf4;
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 0.125rem solid #fff;
+}
+.dropdown-item {
+    padding: 6px 1rem;
+}
+/* End Top Nav */
