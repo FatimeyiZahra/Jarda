@@ -12,7 +12,6 @@ import { LayoutContainerModule } from './shared/containers/layout/layout-contain
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LayoutContainerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

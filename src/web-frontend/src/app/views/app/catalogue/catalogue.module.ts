@@ -9,13 +9,15 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { NewsComponent } from './news/news.component';
 import { NewsDetailsComponent } from './news-details/news-details.component';
 import { ContactComponent } from './contact/contact.component';
+import { PagesContainerModule } from 'src/app/shared/containers/pages/pages-container.module';
 
 
 @NgModule({
   declarations: [CatalogueComponent, HomepageComponent, ProductsComponent, ProductDetailsComponent, NewsComponent, NewsDetailsComponent, ContactComponent],
   imports: [
     CommonModule,
-    CatalogueRoutingModule
+    CatalogueRoutingModule,
+    PagesContainerModule
   ]
 })
 export class CatalogueModule { }

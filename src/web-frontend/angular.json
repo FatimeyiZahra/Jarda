@@ -29,12 +29,12 @@
             ],
             "styles": [
               "src/assets/css/style.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "node_modules/bootstrap/scss/bootstrap.scss",
-              "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": [
-              "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js",              "node_modules/fontawesome/generate.js",
+              "node_modules/bootstrap/js/src/carousel.js",
               "node_modules/fontawesome/index.js"
             ]
           },

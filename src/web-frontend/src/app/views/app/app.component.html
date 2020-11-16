@@ -1,1 +1,19 @@
-<router-outlet></router-outlet>
+<body class="sb-nav-fixed sb-sidenav-toggled">
+    <header>
+        <app-header></app-header>
+        <app-menu></app-menu>
+    </header>
+
+    <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid-fluid">
+                <router-outlet></router-outlet>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <app-footer></app-footer>
+        <app-copyright></app-copyright>
+    </footer>
+</body>
