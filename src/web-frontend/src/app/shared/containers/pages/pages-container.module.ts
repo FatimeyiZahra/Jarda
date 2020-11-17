@@ -4,19 +4,24 @@ import { CampainSliderComponent } from './campain-slider/campain-slider.componen
 import { FreeGamesComponent } from './free-games/free-games.component';
 import { BannerComponent } from './banner/banner.component';
 import { ProductComponent } from './product/product.component';
+import { RouterModule } from '@angular/router';
+import { HelperComponentsModule } from '../../components/helper/helper-components.module';
 
 
 
 @NgModule({
-  declarations: [CampainSliderComponent, FreeGamesComponent,BannerComponent, ProductComponent],
+  declarations: [CampainSliderComponent, FreeGamesComponent, BannerComponent, ProductComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    HelperComponentsModule
+
   ],
   exports:[
-    CampainSliderComponent, 
+    CampainSliderComponent,
     FreeGamesComponent,
      BannerComponent,
-      ProductComponent
+      ProductComponent,
   ]
 })
 export class PagesContainerModule { }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IProduct } from 'src/app/shared/models/product';
 
 @Component({
   selector: 'app-free-games',
@@ -6,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./free-games.component.scss']
 })
 export class FreeGamesComponent implements OnInit {
-
+@Input() products: IProduct[];
   constructor() { }
+
 
   ngOnInit(): void {
   }
