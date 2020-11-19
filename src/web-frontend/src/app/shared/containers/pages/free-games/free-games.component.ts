@@ -7,7 +7,8 @@ import { IProduct } from 'src/app/shared/models/product';
   styleUrls: ['./free-games.component.scss']
 })
 export class FreeGamesComponent implements OnInit {
-@Input() products: IProduct[];
+  @Input() title: string;
+  @Input() products: IProduct[];
   constructor() { }
 
 

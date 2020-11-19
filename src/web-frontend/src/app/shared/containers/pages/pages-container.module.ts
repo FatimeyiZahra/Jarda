@@ -17,7 +17,7 @@ import { HelperComponentsModule } from '../../components/helper/helper-component
     HelperComponentsModule
 
   ],
-  exports:[
+  exports: [
     CampainSliderComponent,
     FreeGamesComponent,
      BannerComponent,

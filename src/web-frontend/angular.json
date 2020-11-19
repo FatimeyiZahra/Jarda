@@ -34,7 +34,6 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "src/assets/js",
               "node_modules/bootstrap/js/src/carousel.js",
               "node_modules/fontawesome/index.js"
             ]

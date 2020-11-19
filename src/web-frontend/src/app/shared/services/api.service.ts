@@ -10,8 +10,19 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-public getFreeProduct(){
-  return this.http.get<IProduct[]>(environment.apiUrl + '/V1/HomePage/free-product')
+public getFreeProduct() {
+  return this.http.get<IProduct[]>(environment.apiUrl + '/V1/HomePage/free-product');
+}
+public getNewReleases() {
+  return this.http.get<IProduct[]>(environment.apiUrl + '/V1/HomePage/new-product');
+}
+public getCoomingProduct() {
+  return this.http.get<IProduct[]>(environment.apiUrl + '/V1/HomePage/coming-product');
+}
+
+public getProductDetails(){
+  return this.http.get<IProduct[]>(environment.apiUrl + '/V1/HomePage/product/6');
+
 }
 
 }
