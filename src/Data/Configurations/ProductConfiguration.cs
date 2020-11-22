@@ -42,7 +42,7 @@ namespace Data.Configurations
 
             builder
                .Property(m => m.Video)
-               .HasMaxLength(100)
+               .HasMaxLength(300)
                .IsRequired();
 
             builder

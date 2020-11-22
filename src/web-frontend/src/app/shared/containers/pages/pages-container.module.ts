@@ -6,6 +6,7 @@ import { BannerComponent } from './banner/banner.component';
 import { ProductComponent } from './product/product.component';
 import { RouterModule } from '@angular/router';
 import { HelperComponentsModule } from '../../components/helper/helper-components.module';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
 
@@ -14,7 +15,8 @@ import { HelperComponentsModule } from '../../components/helper/helper-component
   imports: [
     CommonModule,
     RouterModule,
-    HelperComponentsModule
+    HelperComponentsModule,
+  CarouselModule
 
   ],
   exports: [

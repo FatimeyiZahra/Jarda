@@ -10,6 +10,8 @@ import { NewsComponent } from './news/news.component';
 import { NewsDetailsComponent } from './news-details/news-details.component';
 import { ContactComponent } from './contact/contact.component';
 import { PagesContainerModule } from 'src/app/shared/containers/pages/pages-container.module';
+import { HelperComponentsModule } from 'src/app/shared/components/helper/helper-components.module';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
 @NgModule({
@@ -17,7 +19,8 @@ import { PagesContainerModule } from 'src/app/shared/containers/pages/pages-cont
   imports: [
     CommonModule,
     CatalogueRoutingModule,
-    PagesContainerModule
+    PagesContainerModule,
+    CarouselModule,
   ]
 })
 export class CatalogueModule { }

@@ -20,8 +20,8 @@ public getCoomingProduct() {
   return this.http.get<IProduct[]>(environment.apiUrl + '/V1/HomePage/coming-product');
 }
 
-public getProductDetails(){
-  return this.http.get<IProduct[]>(environment.apiUrl + '/V1/HomePage/product/6');
+public getProductDetails(id: number){
+  return this.http.get<IProduct>(environment.apiUrl + '/V1/HomePage/product/' + id);
 
 }
 

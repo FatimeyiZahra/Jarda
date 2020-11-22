@@ -1,2 +1,387 @@
-<p>product-details works!</p>
-<h2>{{product.name}}</h2>
+<div class="container-fluid-fluid">
+
+    <section class="py-5 store-single-page">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="position-sticky">
+                        <div class="gradient-1 p-4 mb-1">
+                            <img class="img-fluid" src={{productDetails.photos[0]}} alt="">
+                        </div>
+                        <h3 class="mt-4 mb-3">{{productDetails.name}}
+                        </h3>
+                        <p class="font-weight-normal mb-4 text-muted">Explore some of the biggest and
+                            best games from this year's show!
+                        </p>
+                        <div class="d-flex mb-4">
+                            <div class="btn btn-warning col-8"><i class="feather-heart mr-1"></i>
+                                Favorite</div>
+                            <div class="btn btn-primary col-4 px-2"><i class="feather-download-cloud mr-1"></i> Get
+                            </div>
+                        </div>
+                        <div class="bg-light p-3 sidebar-widget mb-4">
+                            <div class="nav nav-pills flex-column lavalamp">
+                                <a class="nav-link" href="#about"><i class="feather-home mr-1"></i>
+                                    About Game</a>
+                                <a class="nav-link" href="#video"><i class="feather-video mr-1"></i>Video</a>
+                                <a class="nav-link" href="#follow"><i class="feather-share-2 mr-1"></i>
+                                    Follow Us</a>
+                                <a class="nav-link" href="#offers"><i class="feather-award mr-1"></i>
+                                    Offers</a>
+                                <a class="nav-link" href="#ratings"><i class="feather-star mr-1"></i>
+                                    Ratings</a>
+                                <a class="nav-link" href="#specifications"><i class="feather-edit mr-1"></i>
+                                    Specifications</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div class="col-lg-12">
+                           
+                <owl-carousel-o [options]="carouselOptions">
+                    <ng-template carouselSlide>
+                        <div class="col-lg-8 px-0">
+                           <h3>{{productDetails.name}}</h3>
+                        </div>
+                    </ng-template> 
+                    <ng-template carouselSlide>
+                        <div class="col-lg-8 px-0">
+                           <h3>{{productDetails.name}}</h3>
+                        </div>
+                    </ng-template> 
+                    <ng-template carouselSlide>
+                        <div class="col-lg-8 px-0">
+                           <h3>{{productDetails.name}}</h3>
+                        </div>
+                    </ng-template> 
+                     
+                  </owl-carousel-o>
+                
+                            <div class="pt-4" id="about"></div>
+                            <h5 class="mb-3 mt-4"> About Game</h5>
+                            <div class="p-5 bg-light">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="list-icon mb-3">
+                                            <p class="text-muted mb-1">Developer</p>
+                                            <p class="text-dark">{{productDetails.developer}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="list-icon mb-3">
+                                            <p class="text-muted mb-1">Publisher</p>
+                                            <p class="text-dark">{{productDetails.publisher}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="list-icon mb-3">
+                                            <p class="text-muted mb-1">Release Date</p>
+                                            <p class="text-dark">{{productDetails.releaseDate}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="list-icon mb-3">
+                                            <p class="text-muted mb-1">Tags</p>
+                                            <p class="text-dark">{{productDetails.productTags}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="list-icon mb-3">
+                                            <p class="text-muted mb-1">Rating</p>
+                                            <p class="text-dark">{{productDetails.rating}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4">
+                                        <div class="list-icon mb-3">
+                                            <p class="text-muted mb-1">Platform</p>
+                                            <p class="text-dark">{{productDetails.productSpecifications}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <p class="mt-4">{{productDetails.name}}</p>
+                                <p class="text-muted mb-0">{{productDetails.desc}}
+                                </p>
+                            </div>
+                            <div class="pt-4" id="video"></div>
+                            <h5 class="mb-3 mt-4">Video</h5>
+                            <div class="bg-light">
+                                <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%"
+                                    height="443" type="text/html" src="{{productDetails.video}}"></iframe>
+                            </div>
+                            <div class="pt-4" id="follow"></div>
+                            <h5 class="mb-3 mt-4">Follow Us</h5>
+                            <div class="p-5 bg-light follow-us text-center">
+                                <a href="#"><i class="feather-linkedin"></i></a>
+                                <a href="#"><i class="feather-instagram"></i></a>
+                                <a href="#"><i class="feather-youtube"></i></a>
+                                <a href="#"><i class="feather-globe"></i></a>
+                                <a href="#"><i class="feather-facebook"></i></a>
+                            </div>
+                            <div class="pt-4" id="offers"></div>
+                            <div class="d-flex align-item-center title mb-3 mt-4">
+                                <h5 class="m-0">Offers</h5>
+                                <a href="coupons.html" class="btn btn-sm btn-outline-dark ml-auto">VIEW
+                                    MORE</a>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="osahan-card">
+                                        <a href="store-single.html">
+                                            <img class="img-fluid" src="assets/img/1.jpg" alt="">
+                                            <div class="bg-primary text-center p-1 text-white">COUPON
+                                                CODE - 2020COUPON</div>
+                                            <div class="osahan-card-body mt-3">
+                                                <h6 class="text-dark mb-1">Pathway</h6>
+                                                <p class="m-0 text-muted">Free Now - Jun 25 at 08:30 PM
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="osahan-card">
+                                        <a href="store-single.html">
+                                            <img class="img-fluid" src="assets/img/1.jpg" alt="">
+                                            <div class="bg-primary text-center p-1 text-white">COUPON
+                                                CODE - 2020COUPON</div>
+                                            <div class="osahan-card-body mt-3">
+                                                <h6 class="text-dark mb-1">AER Memories of Old</h6>
+                                                <p class="m-0 text-muted">Free Now - Jun 25 at 08:30 PM
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="osahan-card">
+                                        <a href="store-single.html">
+                                            <img class="img-fluid" src="assets/img/1.jpg" alt="">
+                                            <div class="bg-primary text-center p-1 text-white">COUPON
+                                                CODE - 2020COUPON</div>
+                                            <div class="osahan-card-body mt-3">
+                                                <h6 class="text-dark mb-1">Stranger Things 3: The Game
+                                                </h6>
+                                                <p class="m-0 text-muted">Free Now - Jun 25 at 08:30 PM
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="osahan-card">
+                                        <a href="store-single.html">
+                                            <img class="img-fluid" src="assets/img/1.jpg" alt="">
+                                            <div class="bg-primary text-center p-1 text-white">COUPON
+                                                CODE - 2020COUPON</div>
+                                            <div class="osahan-card-body mt-3">
+                                                <h6 class="text-dark mb-1">Pathway</h6>
+                                                <p class="m-0 text-muted">Free Now - Jun 25 at 08:30 PM
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-4" id="ratings"></div>
+                            <h5 class="mb-3">Ratings</h5>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="rating bg-light p-4">
+                                        <h6 class="mb-1">IGN</h6>
+                                        <p class="text-muted">by Austen Goslin</p>
+                                        <hr>
+                                        <p>
+                                            9.6 / 10
+                                            <!-- <sapn class="ml-3 text-warning"><i
+                                                    class="feather-star"></i><i
+                                                    class="feather-star"></i><i
+                                                    class="feather-star"></i><i
+                                                    class="feather-star"></i><i
+                                                    class="feather-star"></i></sapn> -->
+                                        </p>
+                                        <p class="text-muted mb-0">“Thanks to the freedom of its
+                                            outstanding building mechanic, Fotgite Battle Royale isn't
+                                            just a great battle royale game – it's one of the best
+                                            multiplayer games in recent history.”</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="rating bg-light p-4">
+                                        <h6 class="mb-1">Game Informer
+                                        </h6>
+                                        <p class="text-muted">by Daniel Tack</p>
+                                        <hr>
+                                        <p>
+                                            9.6 / 10
+                                            <!-- <sapn class="ml-3 text-warning"><i
+                                                    class="feather-star"></i><i
+                                                    class="feather-star"></i><i
+                                                    class="feather-star"></i><i
+                                                    class="feather-star"></i></sapn> -->
+                                        </p>
+                                        <p class="text-muted mb-0">“Thanks to the freedom of its
+                                            outstanding building mechanic, Fotgite Battle Royale isn't
+                                            just a great battle royale game – it's one of the best
+                                            multiplayer games in recent history.”</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="rating bg-light p-4">
+                                        <h6 class="mb-1">GSGS Games</h6>
+                                        <p class="text-muted">by Ron Singh</p>
+                                        <hr>
+                                        <p>
+                                            9.6 / 10
+                                            <!-- <sapn class="ml-3 text-warning"><i
+                                                    class="feather-star"></i><i
+                                                    class="feather-star"></i><i
+                                                    class="feather-star"></i><i
+                                                    class="feather-star"></i><i
+                                                    class="feather-star"></i></sapn> -->
+                                        </p>
+                                        <p class="text-muted mb-0">“Thanks to the freedom of its
+                                            outstanding building mechanic, Fotgite Battle Royale isn't
+                                            just a great battle royale game – it's one of the best
+                                            multiplayer games in recent history.”</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-4" id="specifications"></div>
+                            <h5 class="mb-3 mt-4"> Specifications</h5>
+                            <div class="p-5 bg-light specifications">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home"
+                                            role="tab" aria-controls="home" aria-selected="true">WINDOWS
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile"
+                                            role="tab" aria-controls="profile" aria-selected="false">MAC OS</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="home" role="tabpanel"
+                                        aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <div class="list-icon mb-3">
+                                                    <p class="text-muted mb-1">OS</p>
+                                                    <p class="text-dark">Windows 7/8/10 64-bit
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4">
+                                                <div class="list-icon mb-3">
+                                                    <p class="text-muted mb-1">CPU</p>
+                                                    <p class="text-dark">Core i3 3.3 GHz
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4">
+                                                <div class="list-icon mb-3">
+                                                    <p class="text-muted mb-1">Memory</p>
+                                                    <p class="text-dark">4GB RAM
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <div class="list-icon mb-3">
+                                                    <p class="text-muted mb-1">GPU</p>
+                                                    <p class="text-dark">Intel HD 4000
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4">
+                                                <div class="list-icon mb-3">
+                                                    <p class="text-muted mb-1">CPU (Recommended)</p>
+                                                    <p class="text-dark">Core i5 3.5 GHz
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4">
+                                                <div class="list-icon mb-3">
+                                                    <p class="text-muted mb-1">Memory (Recommended)</p>
+                                                    <p class="text-dark">8GB RAM
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="profile" role="tabpanel"
+                                        aria-labelledby="profile-tab">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <div class="list-icon mb-3">
+                                                    <p class="text-muted mb-1">OS</p>
+                                                    <p class="text-dark">Mac OSX Mojave (10.14.6+)
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4">
+                                                <div class="list-icon mb-3">
+                                                    <p class="text-muted mb-1">CPU</p>
+                                                    <p class="text-dark">Core i3 3.3 GHz
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4">
+                                                <div class="list-icon mb-3">
+                                                    <p class="text-muted mb-1">Memory</p>
+                                                    <p class="text-dark">4GB RAM
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4">
+                                                <div class="list-icon mb-3">
+                                                    <p class="text-muted mb-1">GPU</p>
+                                                    <p class="text-dark">Intel Iris Pro 5200
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4">
+                                                <div class="list-icon mb-3">
+                                                    <p class="text-muted mb-1">CPU (Recommended)</p>
+                                                    <p class="text-dark">Core i5 3.5 GHz
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4">
+                                                <div class="list-icon mb-3">
+                                                    <p class="text-muted mb-1">Memory (Recommended)</p>
+                                                    <p class="text-dark">8GB RAM
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <p class="text-muted mt-4 mb-0">© 2020, Apicgames Games, Inc. Apicgames,
+                                    Apicgames Games, the Apicgames Games logo, Fotgite, the Fotgite
+                                    logo, Unreal, Unreal Engine 4 and UE4 are trademarks or registered
+                                    trademarks of Apicgames Games, Inc. in the United States of America
+                                    and elsewhere. All rights reserved.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+</div>
