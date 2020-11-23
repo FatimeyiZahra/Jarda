@@ -1,5 +1,4 @@
 <div class="container-fluid-fluid">
-
     <section class="py-5 store-single-page">
         <div class="container-fluid">
             <div class="row">
@@ -19,6 +18,7 @@
                             <div class="btn btn-primary col-4 px-2"><i class="feather-download-cloud mr-1"></i> Get
                             </div>
                         </div>
+                        <!-- short way for about game (start-->
                         <div class="bg-light p-3 sidebar-widget mb-4">
                             <div class="nav nav-pills flex-column lavalamp">
                                 <a class="nav-link" href="#about"><i class="feather-home mr-1"></i>
@@ -34,180 +34,108 @@
                                     Specifications</a>
                             </div>
                         </div>
+                        <!-- short way for about game (end -->
+
                     </div>
                 </div>
                 <div class="col-lg-9">
                     <div class="row">
                         <div class="col-lg-12">
-
-                            <!-- <owl-carousel-o [options]="carouselOptions">
-                                <ng-template carouselSlide>
-                                        <div class="col-lg-8 px-0">
-                                            <img src="{{productDetails.photos}}" alt="">
-                                        </div>
-                                </ng-template>
-                            </owl-carousel-o> -->
+                            <!-- carousel started -->
                             <owl-carousel-o [options]="carouselOptions">
                                 <ng-template carouselSlide *ngFor="let prd of productDetails.photos">
-                                            <div class="col-lg-8 px-0">
-                                                <img src="{{productDetails.photos[0]}}" alt="">
-                                            </div>
+                                    <div class="col-lg-8 px-0">
+                                        <img src="{{productDetails.photos[0]}}" alt="">
+                                    </div>
                                 </ng-template>
                             </owl-carousel-o>
+                            <!-- carousel finished -->
 
-                            <div class="pt-4" id="about"></div>
-                            <h5 class="mb-3 mt-4"> About Game</h5>
-                            <div class="p-5 bg-light">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4">
-                                        <div class="list-icon mb-3">
-                                            <p class="text-muted mb-1">Developer</p>
-                                            <p class="text-dark">{{productDetails.developer}}</p>
+                            <!-- about game start-->
+                            <div>
+                                <div class="pt-4" id="about"></div>
+                                <h5 class="mb-3 mt-4"> About Game</h5>
+                                <div class="p-5 bg-light">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4">
+                                            <div class="list-icon mb-3">
+                                                <p class="text-muted mb-1">Developer</p>
+                                                <p class="text-dark">{{productDetails.developer}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4">
+                                            <div class="list-icon mb-3">
+                                                <p class="text-muted mb-1">Publisher</p>
+                                                <p class="text-dark">{{productDetails.publisher}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4">
+                                            <div class="list-icon mb-3">
+                                                <p class="text-muted mb-1">Release Date</p>
+                                                <p class="text-dark">{{productDetails.releaseDate | date:'MMM d, y, h:mm a'}}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-md-4">
-                                        <div class="list-icon mb-3">
-                                            <p class="text-muted mb-1">Publisher</p>
-                                            <p class="text-dark">{{productDetails.publisher}}</p>
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4">
+                                            <div class="list-icon mb-3">
+                                                <p class="text-muted mb-1">Tags</p>
+                                                <p class="text-dark">{{productDetails.productTags}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4">
+                                            <div class="list-icon mb-3">
+                                                <p class="text-muted mb-1">Rating</p>
+                                                <p class="text-dark">{{productDetails.rating}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4">
+                                            <div class="list-icon mb-3">
+                                                <p class="text-muted mb-1">Platform</p>
+                                                <p class="text-dark">{{productDetails.productSpecifications}}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-md-4">
-                                        <div class="list-icon mb-3">
-                                            <p class="text-muted mb-1">Release Date</p>
-                                            <p class="text-dark">{{productDetails.releaseDate}}</p>
-                                        </div>
-                                    </div>
+                                    <hr>
+                                    <p class="mt-4">{{productDetails.name}}</p>
+                                    <p class="text-muted mb-0">{{productDetails.desc}}
+                                    </p>
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4">
-                                        <div class="list-icon mb-3">
-                                            <p class="text-muted mb-1">Tags</p>
-                                            <p class="text-dark">{{productDetails.productTags}}</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4">
-                                        <div class="list-icon mb-3">
-                                            <p class="text-muted mb-1">Rating</p>
-                                            <p class="text-dark">{{productDetails.rating}}</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4">
-                                        <div class="list-icon mb-3">
-                                            <p class="text-muted mb-1">Platform</p>
-                                            <p class="text-dark">{{productDetails.productSpecifications}}</p>
-                                        </div>
-                                    </div>
+                                <div class="pt-4" id="video"></div>
+                                <h5 class="mb-3 mt-4">Video</h5>
+                                <div class="bg-light">
+                                    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%"
+                                        height="443" type="text/html" src="{{productDetails.video}}"></iframe>
                                 </div>
-                                <hr>
-                                <p class="mt-4">{{productDetails.name}}</p>
-                                <p class="text-muted mb-0">{{productDetails.desc}}
-                                </p>
+
+
                             </div>
-                            <div class="pt-4" id="video"></div>
-                            <h5 class="mb-3 mt-4">Video</h5>
-                            <div class="bg-light">
-                                <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%"
-                                    height="443" type="text/html" src="{{productDetails.video}}"></iframe>
-                            </div>
+                            <!-- about game end-->
+
+                            <!-- scoial media start -->
                             <div class="pt-4" id="follow"></div>
                             <h5 class="mb-3 mt-4">Follow Us</h5>
                             <div class="p-5 bg-light follow-us text-center">
-                                <a href="#"><i class="feather-linkedin"></i></a>
-                                <a href="#"><i class="feather-instagram"></i></a>
-                                <a href="#"><i class="feather-youtube"></i></a>
-                                <a href="#"><i class="feather-globe"></i></a>
-                                <a href="#"><i class="feather-facebook"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
                             </div>
+                            <!-- scoial media end -->
+
                             <div class="pt-4" id="offers"></div>
                             <div class="d-flex align-item-center title mb-3 mt-4">
                                 <h5 class="m-0">Offers</h5>
-                                <a href="coupons.html" class="btn btn-sm btn-outline-dark ml-auto">VIEW
-                                    MORE</a>
                             </div>
+                            <!-- relative products -->
                             <div class="row">
-                                <div class="col-lg-6" *ngFor="let prd of relativeProduct">
+                                <!-- <div class="col-lg-6" *ngFor="let prd of relativeProduct"> -->
                                     <!-- <app-product-item [product]="prd"></app-product-item> -->
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="osahan-card">
-                                        <a href="store-single.html">
-                                            <img class="img-fluid" src="assets/img/1.jpg" alt="">
-                                            <div class="bg-primary text-center p-1 text-white">COUPON
-                                                CODE - 2020COUPON</div>
-                                            <div class="osahan-card-body mt-3">
-                                                <h6 class="text-dark mb-1">Pathway</h6>
-                                                <p class="m-0 text-muted">Free Now - Jun 25 at 08:30 PM
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                             
+                                    <app-product [products]="relativeProduct"></app-product>
+                                <!-- </div> -->
                             </div>
-                            <div class="pt-4" id="ratings"></div>
-                            <h5 class="mb-3">Ratings</h5>
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="rating bg-light p-4">
-                                        <h6 class="mb-1">IGN</h6>
-                                        <p class="text-muted">by Austen Goslin</p>
-                                        <hr>
-                                        <p>
-                                            9.6 / 10
-                                            <!-- <sapn class="ml-3 text-warning"><i
-                                                    class="feather-star"></i><i
-                                                    class="feather-star"></i><i
-                                                    class="feather-star"></i><i
-                                                    class="feather-star"></i><i
-                                                    class="feather-star"></i></sapn> -->
-                                        </p>
-                                        <p class="text-muted mb-0">“Thanks to the freedom of its
-                                            outstanding building mechanic, Fotgite Battle Royale isn't
-                                            just a great battle royale game – it's one of the best
-                                            multiplayer games in recent history.”</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="rating bg-light p-4">
-                                        <h6 class="mb-1">Game Informer
-                                        </h6>
-                                        <p class="text-muted">by Daniel Tack</p>
-                                        <hr>
-                                        <p>
-                                            9.6 / 10
-                                            <!-- <sapn class="ml-3 text-warning"><i
-                                                    class="feather-star"></i><i
-                                                    class="feather-star"></i><i
-                                                    class="feather-star"></i><i
-                                                    class="feather-star"></i></sapn> -->
-                                        </p>
-                                        <p class="text-muted mb-0">“Thanks to the freedom of its
-                                            outstanding building mechanic, Fotgite Battle Royale isn't
-                                            just a great battle royale game – it's one of the best
-                                            multiplayer games in recent history.”</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="rating bg-light p-4">
-                                        <h6 class="mb-1">GSGS Games</h6>
-                                        <p class="text-muted">by Ron Singh</p>
-                                        <hr>
-                                        <p>
-                                            9.6 / 10
-                                            <!-- <sapn class="ml-3 text-warning"><i
-                                                    class="feather-star"></i><i
-                                                    class="feather-star"></i><i
-                                                    class="feather-star"></i><i
-                                                    class="feather-star"></i><i
-                                                    class="feather-star"></i></sapn> -->
-                                        </p>
-                                        <p class="text-muted mb-0">“Thanks to the freedom of its
-                                            outstanding building mechanic, Fotgite Battle Royale isn't
-                                            just a great battle royale game – it's one of the best
-                                            multiplayer games in recent history.”</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <!-- relative products end -->
+                           
                             <div class="pt-4" id="specifications"></div>
                             <h5 class="mb-3 mt-4"> Specifications</h5>
                             <div class="p-5 bg-light specifications">
@@ -336,8 +264,4 @@
             </div>
         </div>
     </section>
-
-
-
-
 </div>

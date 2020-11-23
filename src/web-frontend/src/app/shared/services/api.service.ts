@@ -24,8 +24,8 @@ public getProductDetails(id: number){
   return this.http.get<IProduct>(environment.apiUrl + '/V1/HomePage/product/' + id);
 
 }
-public getRelativeProduct(id: number) {
-  return this.http.get<IProduct[]>(environment.apiUrl + '/V1/HomePage/relative-products' + id);
+public getRelativeProduct(productId: number) {
+  return this.http.get<IProduct[]>(environment.apiUrl + '/V1/HomePage/relative-products?productId=' + productId);
 }
 // /V1/HomePage/relative-products?productId=7
 
