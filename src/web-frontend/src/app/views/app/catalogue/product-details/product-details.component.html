@@ -39,26 +39,22 @@
                 <div class="col-lg-9">
                     <div class="row">
                         <div class="col-lg-12">
-                           
-                <owl-carousel-o [options]="carouselOptions">
-                    <ng-template carouselSlide>
-                        <div class="col-lg-8 px-0">
-                           <h3>{{productDetails.name}}</h3>
-                        </div>
-                    </ng-template> 
-                    <ng-template carouselSlide>
-                        <div class="col-lg-8 px-0">
-                           <h3>{{productDetails.name}}</h3>
-                        </div>
-                    </ng-template> 
-                    <ng-template carouselSlide>
-                        <div class="col-lg-8 px-0">
-                           <h3>{{productDetails.name}}</h3>
-                        </div>
-                    </ng-template> 
-                     
-                  </owl-carousel-o>
-                
+
+                            <!-- <owl-carousel-o [options]="carouselOptions">
+                                <ng-template carouselSlide>
+                                        <div class="col-lg-8 px-0">
+                                            <img src="{{productDetails.photos}}" alt="">
+                                        </div>
+                                </ng-template>
+                            </owl-carousel-o> -->
+                            <owl-carousel-o [options]="carouselOptions">
+                                <ng-template carouselSlide *ngFor="let prd of productDetails.photos">
+                                            <div class="col-lg-8 px-0">
+                                                <img src="{{productDetails.photos[0]}}" alt="">
+                                            </div>
+                                </ng-template>
+                            </owl-carousel-o>
+
                             <div class="pt-4" id="about"></div>
                             <h5 class="mb-3 mt-4"> About Game</h5>
                             <div class="p-5 bg-light">
@@ -86,8 +82,7 @@
                                     <div class="col-lg-4 col-md-4">
                                         <div class="list-icon mb-3">
                                             <p class="text-muted mb-1">Tags</p>
-                                            <p class="text-dark">{{productDetails.productTags}}
-                                            </p>
+                                            <p class="text-dark">{{productDetails.productTags}}</p>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-4">
@@ -130,48 +125,8 @@
                                     MORE</a>
                             </div>
                             <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="osahan-card">
-                                        <a href="store-single.html">
-                                            <img class="img-fluid" src="assets/img/1.jpg" alt="">
-                                            <div class="bg-primary text-center p-1 text-white">COUPON
-                                                CODE - 2020COUPON</div>
-                                            <div class="osahan-card-body mt-3">
-                                                <h6 class="text-dark mb-1">Pathway</h6>
-                                                <p class="m-0 text-muted">Free Now - Jun 25 at 08:30 PM
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="osahan-card">
-                                        <a href="store-single.html">
-                                            <img class="img-fluid" src="assets/img/1.jpg" alt="">
-                                            <div class="bg-primary text-center p-1 text-white">COUPON
-                                                CODE - 2020COUPON</div>
-                                            <div class="osahan-card-body mt-3">
-                                                <h6 class="text-dark mb-1">AER Memories of Old</h6>
-                                                <p class="m-0 text-muted">Free Now - Jun 25 at 08:30 PM
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="osahan-card">
-                                        <a href="store-single.html">
-                                            <img class="img-fluid" src="assets/img/1.jpg" alt="">
-                                            <div class="bg-primary text-center p-1 text-white">COUPON
-                                                CODE - 2020COUPON</div>
-                                            <div class="osahan-card-body mt-3">
-                                                <h6 class="text-dark mb-1">Stranger Things 3: The Game
-                                                </h6>
-                                                <p class="m-0 text-muted">Free Now - Jun 25 at 08:30 PM
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </div>
+                                <div class="col-lg-6" *ngFor="let prd of relativeProduct">
+                                    <!-- <app-product-item [product]="prd"></app-product-item> -->
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="osahan-card">
@@ -187,6 +142,7 @@
                                         </a>
                                     </div>
                                 </div>
+                             
                             </div>
                             <div class="pt-4" id="ratings"></div>
                             <h5 class="mb-3">Ratings</h5>

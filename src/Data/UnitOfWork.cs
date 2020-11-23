@@ -24,6 +24,7 @@ namespace Data
         private TagRepository _tagRepository;
         private SpecificationRepository _specificationRepository;
         private ProductSpecificationRepository _productSpecificationRepository;
+        private UserRepository _userRepository;
 
         public UnitOfWork(ApplicationDbContext context)
         {
@@ -53,6 +54,8 @@ namespace Data
         public ITagRepository Tag => _tagRepository ??= new TagRepository(_context);
         public ISpecificationRepository Specification => _specificationRepository ??= new SpecificationRepository(_context);
         public IProductSpecificationRepository ProductSpecification => _productSpecificationRepository ??= new ProductSpecificationRepository(_context);
+
+        public IUserRepository User => _userRepository ??= new UserRepository(_context);
 
 
 

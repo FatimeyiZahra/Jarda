@@ -21,6 +21,7 @@ namespace Data
         ITagRepository Tag { get; }
         IProductSpecificationRepository ProductSpecification { get; }
         ISpecificationRepository Specification { get; }
+        IUserRepository User { get; }
         Task<int> CommitAsync();
     }
 }

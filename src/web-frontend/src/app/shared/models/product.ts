@@ -1,4 +1,7 @@
 import { IDiscount } from './discount';
+import { IPhoto } from './photo';
+import { IProductSpecifications } from './productSpecifications';
+import { IProductTags } from './productTag';
 
 export interface IProduct{
     id: number;
@@ -12,7 +15,7 @@ export interface IProduct{
     price: number;
     addedDate: string;
     discount: IDiscount;
-    photos: string[];
+    photos: IPhoto;
     productTags: string[];
-    productSpecifications: string[];
+    productSpecifications: IProductSpecifications;
 }

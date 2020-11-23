@@ -10,12 +10,14 @@ import { ApiService } from 'src/app/shared/services/api.service';
 })
 export class ProductDetailsComponent implements OnInit {
 public productDetails: IProduct;
+public relativeProduct: IProduct[];
 
 @Input() title: string;
 @Input() product: IProduct;
   // @Input() products: IProduct[];
   constructor(private apiService: ApiService) {
     this.getProductDetails();
+    this.getRelativeProduct();
    }
    public carouselOptions: OwlOptions = {
     loop: true,
@@ -47,10 +49,18 @@ public productDetails: IProduct;
   ngOnInit(): void {
   }
   getProductDetails(): void{
-    this.apiService.getProductDetails(7).subscribe(
+    this.apiService.getProductDetails(6).subscribe(
       data => {
         this.productDetails = data;
         console.log(data);
+      }
+    );
+  }
+  getRelativeProduct(): void{
+    this.apiService.getRelativeProduct(7).subscribe(
+      data => {
+        this.relativeProduct = data;
+
       }
     );
   }
