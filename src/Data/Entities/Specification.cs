@@ -8,6 +8,7 @@ namespace Data.Entities
     {
         public string Name { get; set; }
 
+
         public List<ProductSpecification> ProductSpecifications { get; set; }
     }
 }

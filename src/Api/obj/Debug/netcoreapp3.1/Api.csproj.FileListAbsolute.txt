@@ -61,8 +61,13 @@ C:\Users\MacBook Air\Desktop\Jarda\src\Api\obj\Debug\netcoreapp3.1\Api.pdb
 C:\Users\MacBook Air\Desktop\Jarda\src\Api\obj\Debug\netcoreapp3.1\Api.genruntimeconfig.cache
 C:\Users\MacBook Air\Desktop\Jarda\src\Api\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\MacBook Air\Desktop\Jarda\src\Api\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\MacBook Air\Desktop\Jarda\src\Api\obj\Debug\netcoreapp3.1\Api.csproj.CoreCompileInputs.cache
-C:\Users\MacBook Air\Desktop\Jarda\src\Api\obj\Debug\netcoreapp3.1\Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\MacBook Air\Desktop\Jarda\src\Api\bin\Debug\netcoreapp3.1\Z.EntityFramework.Extensions.EFCore.dll
 C:\Users\MacBook Air\Desktop\Jarda\src\Api\bin\Debug\netcoreapp3.1\Z.EntityFramework.Plus.EFCore.dll
 C:\Users\MacBook Air\Desktop\Jarda\src\Api\bin\Debug\netcoreapp3.1\Z.Expressions.Eval.dll
+C:\Users\MacBook Air\Desktop\Jarda\src\Api\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\MacBook Air\Desktop\Jarda\src\Api\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
+C:\Users\MacBook Air\Desktop\Jarda\src\Api\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\MacBook Air\Desktop\Jarda\src\Api\obj\Debug\netcoreapp3.1\Api.csproj.CoreCompileInputs.cache
+C:\Users\MacBook Air\Desktop\Jarda\src\Api\obj\Debug\netcoreapp3.1\Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\MacBook Air\Desktop\Jarda\src\Api\obj\Debug\netcoreapp3.1\Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\MacBook Air\Desktop\Jarda\src\Api\bin\Debug\netcoreapp3.1\CryptoHelper.dll

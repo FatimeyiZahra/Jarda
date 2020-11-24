@@ -1,11 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "CtRGqGnkrtD79XJ61yMRKcvZ4reOFaP6XjOuPEQ953mKpHHYb7NX9X0I3hmZOGSDgHULCGtGPGNLgeA08+qu0Q==",
+  "dgSpecHash": "VZugvo2LWr0bxLPCx2ot2AsNGqPt4g2IXC2ULhVYu0VrlQbddpb67FZ/vC6S57fMT2ZyZz4/nuT5r8YtYcXVRg==",
   "success": true,
   "projectFilePath": "C:\\Users\\MacBook Air\\Desktop\\Jarda\\src\\Api\\Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MacBook Air\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\MacBook Air\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
+    "C:\\Users\\MacBook Air\\.nuget\\packages\\cryptohelper\\3.0.2\\cryptohelper.3.0.2.nupkg.sha512",
+    "C:\\Users\\MacBook Air\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
+    "C:\\Users\\MacBook Air\\.nuget\\packages\\fluentvalidation.aspnetcore\\9.3.0\\fluentvalidation.aspnetcore.9.3.0.nupkg.sha512",
+    "C:\\Users\\MacBook Air\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\9.3.0\\fluentvalidation.dependencyinjectionextensions.9.3.0.nupkg.sha512",
+    "C:\\Users\\MacBook Air\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\2.0.1\\microsoft.aspnetcore.cryptography.internal.2.0.1.nupkg.sha512",
+    "C:\\Users\\MacBook Air\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\2.0.1\\microsoft.aspnetcore.cryptography.keyderivation.2.0.1.nupkg.sha512",
     "C:\\Users\\MacBook Air\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\MacBook Air\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\MacBook Air\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Api.Resources
+namespace Api.Resources.User
 {
     public class UserResource
     {
@@ -13,6 +13,6 @@ namespace Api.Resources
         public string Surname { get; set; }
         public string Email { get; set; }
         public string Token { get; set; }
-        //public string RegisterDate { get; set; }
+        public string RegisterDate { get; set; }
     }
 }

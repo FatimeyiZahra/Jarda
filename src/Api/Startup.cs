@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Data;
 using AutoMapper;
+using FluentValidation.AspNetCore;
 
 namespace Api
 {
@@ -39,6 +40,11 @@ namespace Api
                                   });
             });
             services.AddControllers();
+            services.AddMvc(setup => { }).AddFluentValidation(options =>
+            {
+                options.RegisterValidatorsFromAssemblyContaining<Startup>();
+            });
+
 
             services.AddAutoMapper(typeof(Startup));
 

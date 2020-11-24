@@ -1,6 +1,6 @@
 import { IDiscount } from './discount';
 import { IPhoto } from './photo';
-import { IProductSpecifications } from './productSpecifications';
+import { IProductSpecifications } from './productSpecification';
 import { IProductTags } from './productTag';
 
 export interface IProduct{

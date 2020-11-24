@@ -17,6 +17,12 @@ namespace Api.Resources
         public string Desc { get; set; }
         public string Video { get; set; }
         public decimal Price { get; set; }
+        //public string OS { get; set; }
+        //public string CPU { get; set; }
+        //public string Memory { get; set; }
+        //public string GPU { get; set; }
+        //public string CPUrecommended { get; set; }
+        //public string Memoryrecommended { get; set; }
         public DateTime AddedDate { get; set; }
 
         public DiscountResource Discount { get; set; }
